@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Spring Security Example</title>
+</head>
+<body>
+	<div class="container">
+		<h1>HomePage</h1>
+		<!-- 		TODO: Conditional Options Visibility - when admin logger, show more ! -->
+		<ul>
+			<li><a href="products">products</a></li>
+		</ul>
+<!-- 		<ul> -->
+<!-- 			<li><a href="cars">Cars</a></li> -->
+<!-- 		</ul> -->
+		<ul>
+			<li><a href="/cart">see your cart</a></li>
+		</ul>
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" value="Sign Out" />
+		</form>
+	</div>
+
+</body>
+</html>

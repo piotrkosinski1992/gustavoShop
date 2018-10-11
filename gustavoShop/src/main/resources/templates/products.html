@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Core Online Tutorial - List Products</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <div>
+        <h2>Products List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+<!--                 <th>price</th> -->
+<!--                 <th>ammount</th> -->
+<!--                 <th>vMAX</th> -->
+<!--                 <th>View</th> -->
+<!--                 <th>Add To Card</th> -->
+<!--                 <th>Delete</th> -->
+            </tr>
+            <tr th:each="product : ${listOfProducts}">
+                <td th:text="${product.id}"></td>
+                <td th:text="${product.name}"></td>
+<!--                 <td th:text="${product.price}"></td> -->
+<!--                 <td th:text="${product.ammount}"></td> -->
+<!--                 <td th:text="${product.vMAX}"></td> -->
+<!--                 <td><a th:href="${'/product/' + product.id}">View</a></td> -->
+<!--                 <td><a th:href="${'/cart/add/' + product.id}">Add</a></td> -->
+                
+<!--                 ONLY FOR ADMIN -->
+
+<!--               	<td><a th:href="${'/product/edit/' + product.id}">Edit</a></td> -->
+<!--                 <td><a th:href="${'/product/delete/' + product.id}">Delete</a></td> -->
+                
+            </tr>
+        </table>
+<!--         <a th:href="${'/product/new'}">New Product</a> -->
+    </div>
+    		<div>
+			<a href="/shopHomePage">BACK</a>
+		</div>
+</div>
+
+</body>
+</html>
