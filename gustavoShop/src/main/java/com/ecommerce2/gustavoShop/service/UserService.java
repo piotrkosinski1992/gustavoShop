@@ -21,7 +21,7 @@ public class UserService {
 	
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 	
-	//rozkminic czy nie da sie bez dodawania w kostruktorze
+
 	@Autowired
 	public UserService(UserRepository userRepository, RoleRepository roleRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
 			this.userRepository = userRepository;
